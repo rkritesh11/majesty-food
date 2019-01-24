@@ -1,0 +1,16 @@
+<div class="row">
+  <div class="col-md-12">
+    <app-shopping-edit (addItemToShoppingList)="addItem($event)"></app-shopping-edit>
+    <hr>
+    <div class="list-group">
+      <a href="#" class="list-group-item list-group-item-action" *ngFor="let ingredient of ingredients">
+        <div class="d-flex justify-content-between">
+          <h5 class="mb-1">{{ ingredient.name }}</h5>
+          <small>{{ ingredient.amount }}</small>
+        </div>
+        <p class="mb-1">&ldquo; {{ ingredient.quote }} &rdquo;</p>
+        <small class="text-muted">&mdash; {{ ingredient.quoteAuthor }}</small>
+      </a>
+    </div>
+  </div>
+</div>

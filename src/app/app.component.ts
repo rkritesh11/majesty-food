@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'majesty-food';
+  sectionSelected = 'recipe';
+
+  onHeaderLinkClicked(linkSelected: string) {
+    this.sectionSelected = linkSelected;
+  }
+
 }

@@ -1,0 +1,31 @@
+<div class="container text-center" style="margin-top: 120px ">
+  <div class="row">
+    <div class="col-md-12">
+      <img class="img-fluid" [src]="recipe?.imagePath" alt="" class="w-100" style="max-height: 15rem">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <h2>{{recipe?.name}}</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="btn-group">
+        <button typw="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+          Manage Recipe
+        </button>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item">To Shopping List</a>
+          <a href="#" class="dropdown-item">Edit Recipe</a>
+          <a href="#" class="dropdown-item">Delete Recipe</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <p class="text-muted">{{recipe?.description}}</p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+<section id="shopping-edit">
+  <div class="row">
+    <div class="form-control-group col-md-3">
+      <label for="name"></label>
+      <input type="text" class="form-control form-control-md" placeholder="Name" #nameInput>
+    </div>
+    <div class="form-control-group col-md-3">
+      <label for="amount"></label>
+      <input type="text" class="form-control form-control-md" placeholder="Amount" #amountInput>
+    </div>
+    <div class="form-control-group col-md-3">
+      <label for="quote"></label>
+      <input type="text" class="form-control form-control-md" placeholder="Quotes" #quotesInput>
+    </div>
+    <div class="form-control-group col-md-3">
+      <label for="author"></label>
+      <input type="text" class="form-control form-control-md" placeholder="Author" #authorInput>
+    </div>
+    <div class="d-flex justify-content-center w-100">
+      <button type="button" class="m-2 btn btn-success btn-sm-block" (click)="addItem(nameInput,amountInput, quotesInput, authorInput)">Add</button>
+      <button type="button" class=" m-2 btn btn-danger btn-sm-block">Danger</button>
+      <button type="button" class="m-2 btn btn-primary btn-sm-block">Clear</button>
+    </div>
+  </div>
+
+</section>
