@@ -1,8 +1,8 @@
-<div class="card mt-3" style="width: 18rem;">
+<div class="card mt-3" routerLinkActive="active" style="width: 18rem;">
   <img class="card-img-top" [src]="recipe.imagePath" alt="{{recipe.name}}" style="max-height: 10rem">
-  <div class="card-body text-center">
+  <div class="card-body card-active text-center">
     <h5 class="card-title">{{ recipe.name }}</h5>
     <p class="card-text">{{ recipe.description }}</p>
-<a href="#" class="btn btn-outline-success btn-block" (click)="onRecipeItemClick()">View Details</a>
+    <a class="btn btn-outline-success btn-block" [routerLink]="[index]">View Details</a>
   </div>
 </div>

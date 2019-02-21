@@ -1,31 +1,30 @@
 <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
-    <div class="container">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navBarNav" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navBarNav">
-            <a  href ="" class="navbar-brand">MAJESTY FOODS</a>
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item ">
-                    <a href="" class="nav-link active">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" (click) ="onRecipeClick('recipe')">Recipes</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" (click) ="onShoppingClick('shopping-list')">Shopping List</a>
-                </li>
-           
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href=" " id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Manage
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item" href="#">Save Data</a>
-                  <a class="dropdown-item" href="#">Fetch Data</a>
-                </div>
-              </li>
-            </ul>
-        </div>
+  <div class="container">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navBarNav" aria-controls="navbarNavDropdown"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navBarNav">
+      <a href="" class="navbar-brand">MAJESTY FOODS</a>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['recipies']" routerLinkActive="active">Recipes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['shopping-list']" routerLinkActive="active">Shopping
+            List</a>
+        </li>
+
+        <li class="nav-item dropdown" [appDropdown]="'show'">
+          <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" aria-haspopup="true" aria-expanded="false">
+            Manage
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" #childView>
+            <a class="dropdown-item">Save Data</a>
+            <a class="dropdown-item">Fetch Data</a>
+          </div>
+        </li>
+      </ul>
     </div>
+  </div>
 </nav>

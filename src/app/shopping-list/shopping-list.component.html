@@ -1,9 +1,9 @@
 <div class="row">
   <div class="col-md-12">
-    <app-shopping-edit (addItemToShoppingList)="addItem($event)"></app-shopping-edit>
+    <app-shopping-edit></app-shopping-edit>
     <hr>
     <div class="list-group">
-      <a href="#" class="list-group-item list-group-item-action" *ngFor="let ingredient of ingredients">
+      <a (click)="editItem(index)" class="list-group-item list-group-item-action" *ngFor="let ingredient of ingredients; let index= index">
         <div class="d-flex justify-content-between">
           <h5 class="mb-1">{{ ingredient.name }}</h5>
           <small>{{ ingredient.amount }}</small>

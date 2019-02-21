@@ -1,6 +1,6 @@
-<app-header (headerLinkClicked) = "onHeaderLinkClicked($event)"></app-header>
+<app-header (headerLinkClicked)="onHeaderLinkClicked($event)"></app-header>
 <div class="container-fluid container-margin">
-  <div class="row" *ngIf = "sectionSelected === 'recipe'">
+  <!-- <div class="row" *ngIf = "sectionSelected === 'recipe'">
     <div class="col-md-12">
       <app-recipes ></app-recipes>
     </div>
@@ -9,7 +9,10 @@
       <div class="col-md-12">
           <app-shopping-list></app-shopping-list>
       </div>
+  </div> -->
+  <div class="row">
+    <div class="col-md-12">
+      <router-outlet></router-outlet>
+    </div>
   </div>
 </div>
-
-<router-outlet></router-outlet>
